@@ -1,0 +1,4 @@
+import IISKursovaya5ДиректорОтделаПоРаботеСКлиентамиEController from '../i-i-s-kursovaya5-директор-отдела-по-работе-с-клиентами-e';
+
+var IISKursovaya5ДиректорОтделаПоРаботеСКлиентамиENewController = IISKursovaya5ДиректорОтделаПоРаботеСКлиентамиEController;
+export default IISKursovaya5ДиректорОтделаПоРаботеСКлиентамиENewController;

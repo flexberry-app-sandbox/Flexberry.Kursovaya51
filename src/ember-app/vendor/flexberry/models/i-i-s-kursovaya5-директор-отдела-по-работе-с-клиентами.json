@@ -1,0 +1,180 @@
+﻿{
+  "name": "IISKursovaya5ДиректорОтделаПоРаботеСКлиентами",
+  "modelName": "i-i-s-kursovaya5-директор-отдела-по-работе-с-клиентами",
+  "className": "ДиректорОтделаПоРаботеСКлиентами",
+  "nameSpace": "IIS.Kursovaya5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "id",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "имя",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерПаспорта",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТел",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отчество",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "серияПаспорта",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фамилия",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДиректорОтделаПоРаботеСКлиентамиE",
+      "modelName": "i-i-s-kursovaya5-директор-отдела-по-работе-с-клиентами",
+      "attrs": [
+        {
+          "name": "id",
+          "caption": "Id",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "номерТел",
+          "caption": "Номер тел",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "серияПаспорта",
+          "caption": "Серия паспорта",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "номерПаспорта",
+          "caption": "Номер паспорта",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДиректорОтделаПоРаботеСКлиентамиL",
+      "modelName": "i-i-s-kursovaya5-директор-отдела-по-работе-с-клиентами",
+      "attrs": [
+        {
+          "name": "id",
+          "caption": "Id",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "номерТел",
+          "caption": "Номер тел",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "серияПаспорта",
+          "caption": "Серия паспорта",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "номерПаспорта",
+          "caption": "Номер паспорта",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

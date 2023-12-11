@@ -1,0 +1,92 @@
+﻿{
+  "name": "IISKursovaya5ОказаниеКонсультаций",
+  "modelName": "i-i-s-kursovaya5-оказание-консультаций",
+  "className": "ОказаниеКонсультаций",
+  "nameSpace": "IIS.Kursovaya5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "времяКонсультации",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "предоставленнаяУслуга",
+      "type": "i-i-s-kursovaya5-услуга",
+      "flexberryType": "Услуга",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент",
+      "relatedTo": "i-i-s-kursovaya5-клиент",
+      "inverse": "оказаниеКонсультаций"
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "расчетОставшегосяВремени",
+      "relatedTo": "i-i-s-kursovaya5-расчет-оставшегося-времени",
+      "inverse": "оказаниеКонсультаций"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ОказаниеКонсультацийE",
+      "modelName": "i-i-s-kursovaya5-оказание-консультаций",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "времяКонсультации",
+          "caption": "Время консультации",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "предоставленнаяУслуга",
+          "caption": "Предоставленная услуга",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "РасчетОставшегосяВремениE",
+          "caption": "Расчет оставшегося времени",
+          "name": "расчетОставшегосяВремени",
+          "relatedTo": "i-i-s-kursovaya5-расчет-оставшегося-времени",
+          "inverse": null
+        }
+      ]
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,70 @@
+﻿{
+  "name": "IISKursovaya5РасторжениеДоговора",
+  "modelName": "i-i-s-kursovaya5-расторжение-договора",
+  "className": "РасторжениеДоговора",
+  "nameSpace": "IIS.Kursovaya5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "директорОтделаПоРаботеСКлиентами",
+      "relatedTo": "i-i-s-kursovaya5-директор-отдела-по-работе-с-клиентами",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент",
+      "relatedTo": "i-i-s-kursovaya5-клиент",
+      "inverse": "расторжениеДоговора"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "РасторжениеДоговораE",
+      "modelName": "i-i-s-kursovaya5-расторжение-договора",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

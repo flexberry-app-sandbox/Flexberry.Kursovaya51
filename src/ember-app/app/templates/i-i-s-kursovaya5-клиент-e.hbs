@@ -1,0 +1,129 @@
+<h3 class="ui header">{{t "forms.i-i-s-kursovaya5-клиент-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.id
+      class=(if (v-get validationModel "id" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya5-клиент-e.id-caption")
+      data-test-i-i-s-kursovaya5-клиент-e-id=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "id" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фамилия
+      class=(if (v-get validationModel "фамилия" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya5-клиент-e.фамилия-caption")
+      data-test-i-i-s-kursovaya5-клиент-e-фамилия=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фамилия" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.имя
+      class=(if (v-get validationModel "имя" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya5-клиент-e.имя-caption")
+      data-test-i-i-s-kursovaya5-клиент-e-имя=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "имя" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.отчество
+      class=(if (v-get validationModel "отчество" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya5-клиент-e.отчество-caption")
+      data-test-i-i-s-kursovaya5-клиент-e-отчество=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "отчество" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерТелефона
+      class=(if (v-get validationModel "номерТелефона" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya5-клиент-e.номерТелефона-caption")
+      data-test-i-i-s-kursovaya5-клиент-e-номерТелефона=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерТелефона" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.наимОрганицации
+      class=(if (v-get validationModel "наимОрганицации" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya5-клиент-e.наимОрганицации-caption")
+      data-test-i-i-s-kursovaya5-клиент-e-наимОрганицации=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "наимОрганицации" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya5-клиент-e.расторжениеДоговора-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="расторжениеДоговораGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.расторжениеДоговора
+      content=model.расторжениеДоговора
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "расторжениеДоговора" "isInvalid") "error")
+      data-test-i-i-s-kursovaya5-клиент-e-расторжениеДоговора=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "расторжениеДоговора" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya5-клиент-e.заключениеДоговора-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="заключениеДоговораGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.заключениеДоговора
+      content=model.заключениеДоговора
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "заключениеДоговора" "isInvalid") "error")
+      data-test-i-i-s-kursovaya5-клиент-e-заключениеДоговора=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "заключениеДоговора" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya5-клиент-e.оказаниеКонсультаций-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="оказаниеКонсультацийGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.оказаниеКонсультаций
+      content=model.оказаниеКонсультаций
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "оказаниеКонсультаций" "isInvalid") "error")
+      data-test-i-i-s-kursovaya5-клиент-e-оказаниеКонсультаций=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "оказаниеКонсультаций" "message")}}
+  </div>
+</form>

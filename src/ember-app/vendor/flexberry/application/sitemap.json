@@ -1,0 +1,29 @@
+﻿{
+  "applicationCaption": "Kursovaya5",
+  "applicationTitle": "Kursovaya5",
+  "items": [
+    {
+      "link": null,
+      "menuName": "kursovaya5",
+      "caption": "Kursovaya5",
+      "title": "Kursovaya5",
+      "children": [
+        {
+          "link": "i-i-s-kursovaya5-директор-отдела-по-работе-с-клиентами-l",
+          "menuName": null,
+          "caption": "Директор отдела по работе с клиентами",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya5-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,197 @@
+﻿{
+  "name": "IISKursovaya5Клиент",
+  "modelName": "i-i-s-kursovaya5-клиент",
+  "className": "Клиент",
+  "nameSpace": "IIS.Kursovaya5",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "id",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "имя",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наимОрганицации",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерТелефона",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "отчество",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фамилия",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "оказаниеКонсультаций",
+      "relatedTo": "i-i-s-kursovaya5-оказание-консультаций",
+      "inverse": "клиент"
+    },
+    {
+      "name": "расторжениеДоговора",
+      "relatedTo": "i-i-s-kursovaya5-расторжение-договора",
+      "inverse": "клиент"
+    },
+    {
+      "name": "заключениеДоговора",
+      "relatedTo": "i-i-s-kursovaya5-заключение-договора",
+      "inverse": "клиент"
+    }
+  ],
+  "projections": [
+    {
+      "name": "КлиентE",
+      "modelName": "i-i-s-kursovaya5-клиент",
+      "attrs": [
+        {
+          "name": "id",
+          "caption": "Id",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "наимОрганицации",
+          "caption": "Наим органицации",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "РасторжениеДоговораE",
+          "caption": "Расторжение договора",
+          "name": "расторжениеДоговора",
+          "relatedTo": "i-i-s-kursovaya5-расторжение-договора",
+          "inverse": null
+        },
+        {
+          "projectionName": "ЗаключениеДоговораE",
+          "caption": "Заключение договора",
+          "name": "заключениеДоговора",
+          "relatedTo": "i-i-s-kursovaya5-заключение-договора",
+          "inverse": null
+        },
+        {
+          "projectionName": "ОказаниеКонсультацийE",
+          "caption": "Оказание консультаций",
+          "name": "оказаниеКонсультаций",
+          "relatedTo": "i-i-s-kursovaya5-оказание-консультаций",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "КлиентL",
+      "modelName": "i-i-s-kursovaya5-клиент",
+      "attrs": [
+        {
+          "name": "id",
+          "caption": "Id",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "фамилия",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "имя",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "отчество",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "номерТелефона",
+          "caption": "Номер телефона",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "наимОрганицации",
+          "caption": "Наим органицации",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
